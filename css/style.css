@@ -174,7 +174,7 @@ ul {
   background: hsl(4, 100%, 67%);
 }
 
-@media (max-width: 375px) {
+@media (max-width: 600px) {
   .sign-up-form {
     flex-direction: column;
     padding: 0;
