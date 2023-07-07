@@ -1,0 +1,212 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: hsl(234, 29%, 20%);
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+ul {
+  list-style: none;
+}
+
+.sign-up-form {
+  background: #fff;
+  border-radius: 20px;
+  padding: 20px 20px 20px 30px;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  gap: 32px;
+}
+
+.sign-up-form.hidden {
+  display: none;
+}
+
+.sign-up {
+  height: 100%;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.sign-up h1 {
+  font-size: 50px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.sign-up p {
+  width: 40ch;
+  font-size: inherit;
+  margin-bottom: 16px;
+}
+
+.lists > .list {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.lists > .list:last-child {
+  margin-bottom: 32px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  position: relative;
+}
+
+.form .error-message {
+  position: absolute;
+  right: 0;
+  color: hsl(4, 100%, 67%);
+  font-weight: 700;
+}
+
+.form label {
+  font-weight: 700;
+  font-size: inherit;
+}
+
+.form input#email {
+  border-radius: 4px;
+  height: 40px;
+  border: 1px solid hsl(231, 7%, 60%);
+  margin-bottom: 8px;
+  padding: 0 16px;
+}
+
+.form input#email.error {
+  border: 1px solid hsl(4, 100%, 67%);
+  color: hsl(4, 100%, 67%);
+}
+
+.form input#email::placeholder {
+  position: relative;
+}
+
+.form input#email:focus {
+  outline: none;
+}
+
+.form .submit {
+  border: none;
+  background: hsl(234, 29%, 20%);
+  color: #fff;
+  height: 40px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.form .submit:active {
+  background: hsl(4, 100%, 67%);
+}
+
+/* Success label */
+.success-label {
+  display: none;
+  background: #fff;
+  border-radius: 20px;
+  padding: 32px;
+  width: 30%;
+}
+
+.success-label.active {
+  display: block;
+}
+
+.success-label img {
+  height: 20%;
+  width: 20%;
+  margin-bottom: 32px;
+}
+
+.success-label h1 {
+  font-size: 50px;
+  font-weight: 700;
+  margin-bottom: 32px;
+}
+
+.success-label p {
+  margin-bottom: 32px;
+  width: 40ch;
+}
+
+.success-label p a {
+  color: hsl(234, 29%, 20%);
+  font-weight: 700;
+}
+
+.success-label .dismiss {
+  width: 100%;
+  background: hsl(234, 29%, 20%);
+  border: none;
+  color: #fff;
+  height: 40px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.success-label .dismiss:active {
+  background: hsl(4, 100%, 67%);
+}
+
+@media (max-width: 375px) {
+  .sign-up-form {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .sign-up-form .sign-up-img {
+    border-bottom-left-radius: 30px;
+  }
+
+  .sign-up {
+    padding: 20px;
+    width: 100%;
+  }
+
+  .attribution {
+    bottom: -60px;
+  }
+
+  .success-label {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    position: relative;
+  }
+
+  .success-label .dismiss {
+    position: absolute;
+    bottom: 60px;
+    width: 80%;
+  }
+
+  .success-label p {
+    width: 100%;
+  }
+}
